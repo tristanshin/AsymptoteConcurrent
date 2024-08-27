@@ -10,7 +10,7 @@ if __name__ == '__main__':
 	# set up arguments
 	parser = argparse.ArgumentParser()
 	parser.add_argument('filename', nargs = '?', help = 'Filename to compile asy for')
-	parser.add_argument('--processes', help = 'Number of processes to use', default = mp.cpu_count() // 2)
+	parser.add_argument('-p', '--processes', help = 'Number of processes to use', default = mp.cpu_count() // 2)
 	args = parser.parse_args()
 
 	# process arguments
