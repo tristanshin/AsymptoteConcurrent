@@ -31,7 +31,7 @@ if __name__ == '__main__':
 				asy_files.append(file)
 	else:
 		for file in os.listdir('.'):
-			search = re.search(f'{filename}-[0-9]+.asy', file)
+			search = re.search(f'{filename}-[0-9]+\\.asy', file)
 			if search is not None:
 				i, j = search.span()
 				if (i == 0) and (j == len(file)):
