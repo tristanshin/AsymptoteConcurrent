@@ -20,7 +20,7 @@ if __name__ == '__main__':
 			filename = os.path.splitext(filename)[0]
 		if filename.startswith('.\\'):
 			filename = filename[2:]
-	num_processes = max(int(args.processes), 1)
+	num_processes = min(max(int(args.processes), 1), mp.cpu_count())
 
 	# find asy files to compile
 	# if no filename given, compile *.asy
